@@ -9,7 +9,6 @@ EXTERN printf: PROC
 EXTERN scanf: PROC
 EXTERN ExitProcess: PROC
 EXTERN _CRT_INIT: PROC
-EXTERN cosf: PROC
 
 .data
 num_format BYTE "%d",10,0
@@ -29,6 +28,8 @@ mov rax, 1
 
 sub rsp, 8 ; reserve space for i
 push rax ; int i = 1
+
+
 
 loop0001_lb:
 
@@ -54,6 +55,8 @@ cmp rdx, 0
 
 mov rsp, rbp
 
+; jump if not zero
+
 jne loop0001_lb
 
 
@@ -77,3 +80,8 @@ quit PROC ; function quit (value: exit)
 quit ENDP
 
 END
+;
+;
+;
+;
+;
